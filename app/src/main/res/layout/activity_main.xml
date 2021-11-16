@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondodepantalla"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/TextViewTitulo"
+        android:layout_width="281dp"
+        android:layout_height="66dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="596dp"
+        android:scaleX="1"
+        android:scaleY="1"
+        android:text="TitanCombat"
+        android:textColor="#EA1F4E"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/buttonIngresar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="156dp"
+        android:layout_marginBottom="140dp"
+        android:backgroundTint="@color/orange"
+        android:text="Ingresar"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextClave"
+        android:layout_width="209dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="108dp"
+        android:layout_marginBottom="48dp"
+        android:background="@color/white"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="admin"
+        app:layout_constraintBottom_toTopOf="@+id/buttonIngresar"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextUsuario"
+        android:layout_width="209dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="108dp"
+        android:layout_marginBottom="48dp"
+        android:background="@color/white"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="admin"
+        app:layout_constraintBottom_toTopOf="@+id/editTextClave"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
