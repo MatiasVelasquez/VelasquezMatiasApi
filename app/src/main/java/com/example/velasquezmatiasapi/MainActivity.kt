@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
 
             startActivity(intent)
         } else {
-            Toast.makeText(this, "Clave incorrecta", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Datos incorrectos", Toast.LENGTH_SHORT).show()
         }
 
     }
