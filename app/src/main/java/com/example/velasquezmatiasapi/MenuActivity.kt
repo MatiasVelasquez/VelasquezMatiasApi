@@ -24,7 +24,7 @@ class MenuActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
 
-        var etUsuario = findViewById<TextView>(R.id.textViewMenuUsuario)
+        val etUsuario = findViewById<TextView>(R.id.textViewMenuUsuario)
         val btnCrearPersonaje = findViewById<Button>(R.id.ButtonCrearPersonaje)
         val btnVerPersonaje = findViewById<Button>(R.id.buttonVerPersonaje)
         val btnBestiario = findViewById<Button>(R.id.buttonBestiario)
@@ -38,13 +38,13 @@ class MenuActivity : AppCompatActivity() {
         service = retrofit.create<servicioApi>(servicioApi::class.java)//implementacion
         getAllPost()
 
-        var user: usuario? = intent.getParcelableExtra<usuario>("administrador")
+        val user: usuario? = intent.getParcelableExtra<usuario>("administrador")
 
         if (user != null) {
             etUsuario.text = user.nombreUsuario
         }
 
-        var character: Personaje? = intent.getParcelableExtra<Personaje>("personaje")
+        val character: Personaje? = intent.getParcelableExtra<Personaje>("personaje")
 
         val lobo1: Lobo? = intent.getParcelableExtra<Lobo>("lobo")
         val araña1: Araña? = intent.getParcelableExtra<Araña>("araña")
@@ -105,13 +105,13 @@ class MenuActivity : AppCompatActivity() {
     }
     fun getAllPost(){
 
-        var tvApi = findViewById<TextView>(R.id.textViewApi)
+        val tvApi = findViewById<TextView>(R.id.textViewApi)
 
         service.getAllPost().enqueue(object : Callback<List<Post>> {//Recupero la lista
         override fun onResponse(call: Call<List<Post>>, response: Response<List<Post>>) {//En caso de obtener datos
-            var postList:List<Post>? = response.body()
+            val postList:List<Post>? = response.body()
 
-            tvApi.text = postList?.get(1)?.title.toString()
+            tvApi.text = postList?.get(0)?.id.toString()
         }
 
             override fun onFailure(call: Call<List<Post>>, t: Throwable) {//En caso de fallar

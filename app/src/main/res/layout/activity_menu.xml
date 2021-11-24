@@ -119,8 +119,8 @@
         android:id="@+id/textViewApi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="156dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginEnd="104dp"
+        android:layout_marginBottom="24dp"
         android:text="TextView"
         android:textAllCaps="true"
         android:textColor="@color/black"
@@ -128,4 +128,16 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/ButtonCrearPersonaje"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="ID:"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/ButtonCrearPersonaje"
+        app:layout_constraintEnd_toStartOf="@+id/textViewApi" />
 </androidx.constraintlayout.widget.ConstraintLayout>
